@@ -1,0 +1,8 @@
+CHANNEL:
+    FIELDS: ChannelSize, ChannelFillPercentage, EventPutAttemptCount
+
+SOURCE:
+  FIELDS: EventAcceptedCount,EventReceivedCount
+
+SINK:
+  FIELDS: ConnectionCreatedCount, ConnectionClosedCount, EventDrainSuccessCount, BatchUnderflowCount
