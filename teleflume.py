@@ -3,6 +3,7 @@
 import argparse
 import requests
 import yaml
+import sys
 import os
 
 
@@ -21,8 +22,8 @@ def parse_args():
         "--config",
         help="config file with monitoring parameters",
         type=str,
-        required=True,
-        default=os.getenv("TELEFLUME_CONFIG_FILE", "teleflume.yaml"))
+        default=os.getenv("TELEFLUME_CONFIG_FILE",
+            "%s/teleflume.yaml" % os.path.dirname(sys.argv[0])))
     parser.add_argument(
         "-measurement",
         "--measurement",
